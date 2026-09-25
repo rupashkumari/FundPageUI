@@ -46,8 +46,8 @@ export default function ScanAndPayModal({
 
   const parsedAmount = parseFloat(amount) > 0 ? parseFloat(amount) : 100;
   const formattedAmount = parsedAmount.toFixed(2);
-  const upiUri = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(recipientName)}&am=${formattedAmount}&cu=INR&tn=AddFunds`;
-
+  // const upiUri = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(recipientName)}&am=${formattedAmount}&cu=INR&tn=AddFunds`;
+  const upiUri = `upi://pay?pa=${upiId}&am=${formattedAmount}&cu=INR&tn=AddFunds`;
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div
